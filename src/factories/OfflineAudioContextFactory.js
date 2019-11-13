@@ -60,7 +60,7 @@ function create(api, BaseAudioContext) {
       void(this, suspendTime);
       return new Promise((resolve) => {
         this._.state = AudioContextState.SUSPENDED;
-        emit(this, "statechange");
+        emit(this, "statechange", {});
         resolve();
       });
     }
@@ -77,7 +77,7 @@ function create(api, BaseAudioContext) {
       }
       return new Promise((resolve) => {
         this._.state = AudioContextState.RUNNING;
-        emit(this, "statechange");
+        emit(this, "statechange", {});
         resolve();
       });
     }
@@ -91,7 +91,7 @@ function startRendering(api) {
     const renderedBuffer = this.createBuffer(numberOfChannels, length, sampleRate);
 
     this._.state = AudioContextState.CLOSED;
-    emit(this, "statechange");
+    emit(this, "statechange", {});
     emit(this, "complete", { renderedBuffer });
     resolve(renderedBuffer);
   });
