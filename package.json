@@ -49,7 +49,7 @@
     "examples": "eater --dir examples",
     "lint": "eslint src test",
     "postversion": "git push && git push --tags && npm run clean",
-    "prepublish": "npm-run-all clean lint test build",
+    "prepublish": "npm-run-all clean build",
     "preversion": "npm-run-all clean lint test",
     "test": "mocha",
     "travis": "BABEL_DISABLE_CACHE=1 npm-run-all lint test"
