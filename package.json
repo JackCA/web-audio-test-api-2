@@ -48,7 +48,6 @@
     "cover": "BABEL_ENV=coverage nyc --reporter text --reporter html npm test",
     "examples": "eater --dir examples",
     "lint": "eslint src test",
-    "postversion": "git push && git push --tags && npm run clean",
     "test": "mocha",
     "travis": "BABEL_DISABLE_CACHE=1 npm-run-all lint test"
   }
