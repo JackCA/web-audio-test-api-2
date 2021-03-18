@@ -29,7 +29,8 @@
   "files": [
     "package.json",
     "README.md",
-    "lib"
+    "lib",
+    "src"
   ],
   "homepage": "https://github.com/mohayonao/web-audio-test-api-2/",
   "keywords": [
